@@ -11,7 +11,7 @@ let database = JSON.parse(fs.readFileSync('nfc.json'));
 
 /* Pi GPIO for solenoid */
 var Gpio = require('onoff').Gpio; //include onoff to interact with the GPIO
-var Solenoid = new Gpio(23, 'out'); //use GPIO pin 4, and specify that it is out
+var Solenoid = new Gpio(23, 'out'); //use GPIO pin 23, and specify that it is out
 Solenoid.writeSync(0); // initialise it low (upon boot will be floating unless pulled down)
 const sleep = require('sleep-promise');
 
